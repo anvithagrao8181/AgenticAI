@@ -1,0 +1,19 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\oom
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (OOM Test)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\oom>java -Xmx16m -jar bigapp.jar 
+Error: Unable to access jarfile bigapp.jar
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pipeline failed. Sending FULL console log to AIOps Collector...

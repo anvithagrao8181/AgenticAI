@@ -1,0 +1,10 @@
+flask
+torch
+transformers
+pandas
+scikit-learn
+flask
+pandas
+sentence-transformers
+faiss-cpu
+numpy

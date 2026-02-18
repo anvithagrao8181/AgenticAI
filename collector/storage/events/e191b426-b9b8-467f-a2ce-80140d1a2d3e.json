@@ -1,0 +1,23 @@
+{
+  "event_id": "e191b426-b9b8-467f-a2ce-80140d1a2d3e",
+  "source": "jenkins",
+  "service": "mvn",
+  "environment": "ci",
+  "timestamp": "2026-02-18T04:24:52.489918",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Maven Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn>mvn wrongcommand \n'mvn' is not recognized as an internal or external command,\noperable program or batch file.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Maven Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn>mvn wrongcommand \n'mvn' is not recognized as an internal or external command,\noperable program or batch file.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-18T04:24:52.489918",
+    "build_number": "40",
+    "node": "master",
+    "job_name": "mvn",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

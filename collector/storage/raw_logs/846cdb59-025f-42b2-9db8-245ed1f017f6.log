@@ -1,0 +1,19 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\docker_daemon
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Docker Daemon Down)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\docker_daemon>docker ps 
+error during connect: this error may indicate that the docker daemon is not running: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.47/containers/json": open //./pipe/docker_engine: The system cannot find the file specified.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pipeline failed. Sending FULL console log to AIOps Collector...

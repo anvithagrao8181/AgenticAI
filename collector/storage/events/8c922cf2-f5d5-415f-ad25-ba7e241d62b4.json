@@ -1,0 +1,22 @@
+{
+  "event_id": "8c922cf2-f5d5-415f-ad25-ba7e241d62b4",
+  "source": "jenkins",
+  "service": "git-ssh-error-test",
+  "environment": "ci",
+  "timestamp": "2026-01-27T05:41:11.659638",
+  "raw_log": "Failed to fetch console log. Status: 401",
+  "normalized_log": "Failed to fetch console log. Status: 401",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-01-27T05:41:11.509745",
+    "build_number": "54",
+    "node": "master",
+    "job_name": "git-ssh-error-test",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null
+  },
+  "severity": "high"
+}

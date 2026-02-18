@@ -1,0 +1,23 @@
+{
+  "event_id": "c85ed477-94af-44a5-ba07-50e8805dd198",
+  "source": "jenkins",
+  "service": "http_500",
+  "environment": "ci",
+  "timestamp": "2026-02-18T04:53:43.301803",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (HTTP 500 Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500>curl https://httpstat.us/500 \n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (56) schannel: server closed abruptly (missing close_notify)\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (HTTP 500 Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500>curl https://httpstat.us/500 \n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\ncurl: (56) schannel: server closed abruptly (missing close_notify)\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-18T04:53:43.292749",
+    "build_number": "4",
+    "node": "master",
+    "job_name": "http_500",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": "jenkins-pipeline",
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

@@ -1,0 +1,17 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\permission
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Permission Denied)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\permission>type C:\Windows\System32\config\SAM 
+The process cannot access the file because it is being used by another process.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {

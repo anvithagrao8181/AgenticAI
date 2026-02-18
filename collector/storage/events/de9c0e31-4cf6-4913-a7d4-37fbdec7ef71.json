@@ -1,0 +1,23 @@
+{
+  "event_id": "de9c0e31-4cf6-4913-a7d4-37fbdec7ef71",
+  "source": "jenkins",
+  "service": "ssh_timeout",
+  "environment": "ci",
+  "timestamp": "2026-02-17T04:46:53.711327",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ssh_timeout\n[Pipeline] {\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Run Failure Scenario)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ssh_timeout>ssh fakeuser@192.0.2.1 \nPseudo-terminal will not be allocated because stdin is not a terminal.\nssh: connect to host 192.0.2.1 port 22: Connection timed out\n[Pipeline] }\n[Pipeline] // script\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ssh_timeout\n[Pipeline] {\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Run Failure Scenario)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ssh_timeout>ssh fakeuser@192.0.2.1 \nPseudo-terminal will not be allocated because stdin is not a terminal.\nssh: connect to host 192.0.2.1 port 22: Connection timed out\n[Pipeline] }\n[Pipeline] // script\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-17T04:46:53.708869",
+    "build_number": "2",
+    "node": "master",
+    "job_name": "ssh_timeout",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

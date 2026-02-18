@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AIOps Live Dashboard</title>
+<style>
+body{background:#020617;color:white;font-family:Arial;padding:20px}
+.card{background:#111827;padding:20px;margin-top:20px;border-radius:12px}
+.high{color:#ef4444}
+.medium{color:#f59e0b}
+.low{color:#22c55e}
+</style>
+</head>
+<body>
+
+<h1>🧠 Autonomous AIOps Monitoring Console</h1>
+<h3 id="status">Waiting for Jenkins failures...</h3>
+
+<div id="dashboard"></div>
+
+<script>
+
+async function fetchIncident(){
+
+    const res = await fetch("/latest");
+    const data = await res.json();
+
+    if(data.status==="waiting"){
+        return;
+    }
+
+    let steps="";
+    data.remediation_steps.forEach((s,i)=>{
+        steps += `<li>${s.action} <b>[${s.where}]</b> ${s.can_automate?"⚙️ Auto":"👤 Manual"}</li>`;
+    });
+
+    document.getElementById("status").innerText="🚨 Incident Detected";
+
+    document.getElementById("dashboard").innerHTML=`
+        <div class="card">
+            <h2>Failure Type</h2>
+            ${data.label} (confidence ${data.confidence})
+        </div>
+
+        <div class="card">
+            <h2>Root Cause</h2>
+            ${data.root_cause}
+        </div>
+
+        <div class="card">
+            <h2>Priority</h2>
+            <span class="${data.priority}">${data.priority.toUpperCase()}</span>
+        </div>
+
+        <div class="card">
+            <h2>Fix Solution</h2>
+            <ol>${steps}</ol>
+        </div>
+
+        <div class="card">
+            <h2>Automation</h2>
+            ${data.automation_possible ? "✅ Self-healing possible" : "❌ Manual intervention required"}
+        </div>
+        <div class="card">
+    <h2>LLM Prompt</h2>
+    <pre>${data.debug.prompt}</pre>
+</div>
+
+<div class="card">
+    <h2>LLM Raw Response</h2>
+    <pre>${data.debug.raw_llm_output}</pre>
+</div>
+
+    `;
+}
+
+setInterval(fetchIncident,2000);
+
+</script>
+
+</body>
+</html>

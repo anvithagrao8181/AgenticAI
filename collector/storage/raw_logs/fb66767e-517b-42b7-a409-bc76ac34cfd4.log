@@ -1,0 +1,20 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\mvn
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Maven Test)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\mvn>mvn wrongcommand 
+'mvn' is not recognized as an internal or external command,
+operable program or batch file.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pipeline failed. Sending FULL console log to AIOps Collector...

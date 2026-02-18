@@ -1,0 +1,22 @@
+{
+  "event_id": "51e108af-8cfa-494d-86ba-425dd1fb389e",
+  "source": "jenkins",
+  "service": "mvn",
+  "environment": "ci",
+  "timestamp": "2026-02-17T03:36:34.696631",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Declarative: Tool Install)\n[Pipeline] tool\n[Pipeline] envVarsForTool\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Maven Test)\n[Pipeline] tool\n[Pipeline] envVarsForTool\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn>mvn clean test \n[INFO] Scanning for projects...\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.070 s\n[INFO] Finished at: 2026-02-17T09:06:32+05:30\n[INFO] ------------------------------------------------------------------------\n[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn). Please verify you invoked Maven from the correct directory. -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException\n[Pipeline] }\n[Pipeline] // withEnv\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Declarative: Tool Install)\n[Pipeline] tool\n[Pipeline] envVarsForTool\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Maven Test)\n[Pipeline] tool\n[Pipeline] envVarsForTool\n[Pipeline] withEnv\n[Pipeline] {\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn>mvn clean test \n[INFO] Scanning for projects...\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.070 s\n[INFO] Finished at: 2026-02-17T09:06:32+05:30\n[INFO] ------------------------------------------------------------------------\n[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\mvn). Please verify you invoked Maven from the correct directory. -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException\n[Pipeline] }\n[Pipeline] // withEnv\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-17T03:36:34.696631",
+    "build_number": "32",
+    "node": "master",
+    "job_name": "mvn",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null
+  },
+  "severity": "high"
+}

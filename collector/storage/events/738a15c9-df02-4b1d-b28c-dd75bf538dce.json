@@ -1,0 +1,23 @@
+{
+  "event_id": "738a15c9-df02-4b1d-b28c-dd75bf538dce",
+  "source": "jenkins",
+  "service": "git-auth-failed",
+  "environment": "ci",
+  "timestamp": "2026-02-17T04:44:31.136540",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Git Auth Failed)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth>git clone https://wrong:wrong@github.com/private/repo.git \nCloning into 'repo'...\nremote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/private/repo.git/'\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Git Auth Failed)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth>git clone https://wrong:wrong@github.com/private/repo.git \nCloning into 'repo'...\nremote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/private/repo.git/'\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-17T04:44:31.135067",
+    "build_number": "2",
+    "node": "master",
+    "job_name": "git-auth-failed",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

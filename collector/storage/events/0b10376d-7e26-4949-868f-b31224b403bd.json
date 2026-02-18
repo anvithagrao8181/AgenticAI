@@ -1,0 +1,22 @@
+{
+  "event_id": "0b10376d-7e26-4949-868f-b31224b403bd",
+  "source": "jenkins",
+  "service": "mvn",
+  "environment": "ci",
+  "timestamp": "2026-01-27T07:06:08.125904",
+  "raw_log": "Build failed at stage: Build. Check Jenkins console for full log.",
+  "normalized_log": "Build failed at stage: Build. Check Jenkins console for full log.",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-01-27T07:06:08.122672",
+    "build_number": "5",
+    "node": "master",
+    "job_name": "mvn",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null
+  },
+  "severity": "high"
+}

@@ -1,0 +1,22 @@
+{
+  "event_id": "ae73e38b-d526-41f9-a9b7-9992f1f6d5d1",
+  "source": "jenkins",
+  "service": "mvn",
+  "environment": "ci",
+  "timestamp": "2026-01-27T05:39:42.397358",
+  "raw_log": "Failed to fetch console log. Status: 401",
+  "normalized_log": "Failed to fetch console log. Status: 401",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-01-27T05:39:42.153630",
+    "build_number": "4",
+    "node": "master",
+    "job_name": "mvn",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null
+  },
+  "severity": "high"
+}

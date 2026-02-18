@@ -1,0 +1,26 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ssh_timeout
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Run Failure Scenario)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\ssh_timeout>ssh fakeuser@192.0.2.1 
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ssh: connect to host 192.0.2.1 port 22: Connection timed out
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pipeline failed. Sending FULL console log to AIOps Collector...

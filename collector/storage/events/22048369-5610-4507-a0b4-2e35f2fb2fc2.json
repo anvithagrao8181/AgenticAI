@@ -1,0 +1,23 @@
+{
+  "event_id": "22048369-5610-4507-a0b4-2e35f2fb2fc2",
+  "source": "jenkins",
+  "service": "disk_full",
+  "environment": "ci",
+  "timestamp": "2026-02-17T04:59:53.317895",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Disk Full Simulation)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk>fsutil file createnew hugefile.txt 999999999999 \nError 112: There is not enough space on the disk.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Disk Full Simulation)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk>fsutil file createnew hugefile.txt 999999999999 \nError 112: There is not enough space on the disk.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-17T04:59:53.316901",
+    "build_number": "1",
+    "node": "master",
+    "job_name": "disk_full",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "critical"
+}

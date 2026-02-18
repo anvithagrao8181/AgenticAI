@@ -1,0 +1,19 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\git_auth
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Git Auth Failed)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\git_auth>git clone https://wrong:wrong@github.com/private/repo.git 
+Cloning into 'repo'...
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/private/repo.git/'
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {

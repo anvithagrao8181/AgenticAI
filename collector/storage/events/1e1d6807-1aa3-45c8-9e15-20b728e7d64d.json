@@ -1,0 +1,23 @@
+{
+  "event_id": "1e1d6807-1aa3-45c8-9e15-20b728e7d64d",
+  "source": "jenkins",
+  "service": "permission_denied",
+  "environment": "ci",
+  "timestamp": "2026-02-17T04:57:41.935993",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Permission Denied)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission>type C:\\Windows\\System32\\config\\SAM \nThe process cannot access the file because it is being used by another process.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Permission Denied)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission>type C:\\Windows\\System32\\config\\SAM \nThe process cannot access the file because it is being used by another process.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-17T04:57:41.934951",
+    "build_number": "1",
+    "node": "master",
+    "job_name": "permission_denied",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

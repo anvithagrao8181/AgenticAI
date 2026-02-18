@@ -1,0 +1,23 @@
+{
+  "event_id": "fa62e29a-15f7-481c-9d60-6dbd4aa4332c",
+  "source": "jenkins",
+  "service": "docker_daemon",
+  "environment": "ci",
+  "timestamp": "2026-02-18T07:13:14.066504",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\docker_daemon\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Docker Daemon Down)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\docker_daemon>docker ps \nerror during connect: this error may indicate that the docker daemon is not running: Get \"http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.47/containers/json\": open //./pipe/docker_engine: The system cannot find the file specified.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\docker_daemon\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Docker Daemon Down)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\docker_daemon>docker ps \nerror during connect: this error may indicate that the docker daemon is not running: Get \"http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.47/containers/json\": open //./pipe/docker_engine: The system cannot find the file specified.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-18T07:13:14.064221",
+    "build_number": "2",
+    "node": "master",
+    "job_name": "docker_daemon",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": "jenkins-pipeline",
+    "error_signature": "preprocessor_failed"
+  },
+  "severity": "high"
+}

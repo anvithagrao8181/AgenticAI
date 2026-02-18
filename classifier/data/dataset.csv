@@ -1,0 +1,66 @@
+"no space left on device",disk_full,jenkins,disk-job,disk full,high
+"disk is full cannot write",disk_full,jenkins,disk-job,disk full,high
+"filesystem full error",disk_full,jenkins,disk-job,disk full,high
+"insufficient disk space on agent",disk_full,jenkins,disk-job,disk full,high
+"volume capacity exceeded",disk_full,jenkins,disk-job,disk full,high
+"unable to create file disk full",disk_full,jenkins,disk-job,disk full,high
+"not enough storage space",disk_full,jenkins,disk-job,disk full,high
+"write failed no space left",disk_full,jenkins,disk-job,disk full,high
+
+"cannot connect to docker daemon",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker daemon not running",docker_daemon_down,jenkins,docker-job,daemon down,high
+"failed to connect to docker.sock",docker_daemon_down,jenkins,docker-job,daemon down,high
+"dial unix var run docker.sock connect no such file",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker service is inactive",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker engine unavailable",docker_daemon_down,jenkins,docker-job,daemon down,high
+"failed to start docker service",docker_daemon_down,jenkins,docker-job,daemon down,high
+
+"permission denied publickey",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"ssh authentication failed",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"git over ssh access denied",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"publickey authentication failure",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"ssh key rejected by server",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"unable to authenticate via ssh",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+
+"fatal authentication failed for repository",git_auth_failed,jenkins,git-job,auth failed,high
+"invalid username or password git",git_auth_failed,jenkins,git-job,auth failed,high
+"repository access denied",git_auth_failed,jenkins,git-job,auth failed,high
+"could not read from remote repository",git_auth_failed,jenkins,git-job,auth failed,high
+"git clone authentication failed",git_auth_failed,jenkins,git-job,auth failed,high
+"git credentials rejected",git_auth_failed,jenkins,git-job,auth failed,high
+
+"http 500 internal server error",http_500,jenkins,api-job,server error,high
+"500 server error response",http_500,jenkins,api-job,server error,high
+"api returned status code 500",http_500,jenkins,api-job,server error,high
+"backend service returned 500",http_500,jenkins,api-job,server error,high
+"unexpected 500 error from service",http_500,jenkins,api-job,server error,high
+"internal server error occurred",http_500,jenkins,api-job,server error,high
+
+"mvn command not found",mvn_missing,jenkins,mvn-job,command missing,high
+"maven not installed",mvn_missing,jenkins,mvn-job,command missing,high
+"mvn is not recognized",mvn_missing,jenkins,mvn-job,command missing,high
+"unable to locate maven executable",mvn_missing,jenkins,mvn-job,command missing,high
+"maven binary missing from path",mvn_missing,jenkins,mvn-job,command missing,high
+"bash mvn command not found",mvn_missing,jenkins,mvn-job,command missing,high
+
+"permission denied while accessing file",permission_denied,jenkins,perm-job,permission denied,medium
+"access denied to directory",permission_denied,jenkins,perm-job,permission denied,medium
+"user does not have required permission",permission_denied,jenkins,perm-job,permission denied,medium
+"operation not permitted",permission_denied,jenkins,perm-job,permission denied,medium
+"cannot execute due to permission restrictions",permission_denied,jenkins,perm-job,permission denied,medium
+"write permission denied",permission_denied,jenkins,perm-job,permission denied,medium
+
+"scm checkout failed",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"failed to fetch repository",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"git checkout failed",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"error cloning repository",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"unable to checkout branch",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"repository checkout unsuccessful",scm_checkout_failed,jenkins,git-job,checkout failed,high
+
+"ssh connection timed out",ssh_timeout,jenkins,ssh-job,timeout,high
+"timeout while connecting to host",ssh_timeout,jenkins,ssh-job,timeout,high
+"operation timed out ssh",ssh_timeout,jenkins,ssh-job,timeout,high
+"ssh handshake timeout",ssh_timeout,jenkins,ssh-job,timeout,high
+"connection timed out port 22",ssh_timeout,jenkins,ssh-job,timeout,high
+"ssh session timeout",ssh_timeout,jenkins,ssh-job,timeout,high
+
