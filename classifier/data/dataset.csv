@@ -64,3 +64,69 @@
 "connection timed out port 22",ssh_timeout,jenkins,ssh-job,timeout,high
 "ssh session timeout",ssh_timeout,jenkins,ssh-job,timeout,high
 
+"no space left on device while writing artifact",disk_full,jenkins,disk-job,disk full,high
+"failed writing to workspace insufficient space",disk_full,jenkins,disk-job,disk full,high
+"jenkins workspace out of disk space",disk_full,jenkins,disk-job,disk full,high
+"cannot allocate disk space",disk_full,jenkins,disk-job,disk full,high
+"error writing file system full",disk_full,jenkins,disk-job,disk full,high
+"disk quota exceeded",disk_full,jenkins,disk-job,disk full,high
+"build failed no disk space available",disk_full,jenkins,disk-job,disk full,high
+"temporary directory full",disk_full,jenkins,disk-job,disk full,high
+"overlayfs no space left",disk_full,jenkins,disk-job,disk full,high
+"docker build failed no space left on device",disk_full,jenkins,disk-job,disk full,high
+
+"cannot connect to docker engine",docker_daemon_down,jenkins,docker-job,daemon down,high
+"dockerd process not found",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker ps returned error daemon not responding",docker_daemon_down,jenkins,docker-job,daemon down,high
+"error during connect http docker socket",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker info failed daemon unreachable",docker_daemon_down,jenkins,docker-job,daemon down,high
+"systemctl status docker inactive",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker build cannot connect to daemon",docker_daemon_down,jenkins,docker-job,daemon down,high
+"container runtime not running",docker_daemon_down,jenkins,docker-job,daemon down,high
+
+"authentication refused publickey",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"no supported authentication methods available",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"host key verification failed",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"ssh permission denied password publickey",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"key exchange failed authentication",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+"remote rejected our key",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
+
+"fatal could not authenticate to github",git_auth_failed,jenkins,git-job,auth failed,high
+"authentication required but no credentials provided",git_auth_failed,jenkins,git-job,auth failed,high
+"access to repository forbidden",git_auth_failed,jenkins,git-job,auth failed,high
+"git push rejected authentication",git_auth_failed,jenkins,git-job,auth failed,high
+"remote repository authentication error",git_auth_failed,jenkins,git-job,auth failed,high
+"token authentication failed",git_auth_failed,jenkins,git-job,auth failed,high
+
+"received http status 500 from upstream",http_500,jenkins,api-job,server error,high
+"service responded with 500 internal error",http_500,jenkins,api-job,server error,high
+"gateway returned 500 error",http_500,jenkins,api-job,server error,high
+"application crashed returning 500",http_500,jenkins,api-job,server error,high
+"server error during api call",http_500,jenkins,api-job,server error,high
+"unexpected response 500",http_500,jenkins,api-job,server error,high
+
+"/usr/bin/mvn not found",mvn_missing,jenkins,mvn-job,command missing,high
+"mvn executable missing in agent",mvn_missing,jenkins,mvn-job,command missing,high
+"maven home not set",mvn_missing,jenkins,mvn-job,command missing,high
+"apache maven not installed on node",mvn_missing,jenkins,mvn-job,command missing,high
+"mvn clean install failed command not found",mvn_missing,jenkins,mvn-job,command missing,high
+"cannot run mvn binary missing",mvn_missing,jenkins,mvn-job,command missing,high
+
+"chmod required permission denied",permission_denied,jenkins,perm-job,permission denied,medium
+"cannot open file permission denied",permission_denied,jenkins,perm-job,permission denied,medium
+"jenkins user lacks permission",permission_denied,jenkins,perm-job,permission denied,medium
+"access forbidden filesystem",permission_denied,jenkins,perm-job,permission denied,medium
+"failed to write file permission error",permission_denied,jenkins,perm-job,permission denied,medium
+
+"hudson git checkout returned status code 128",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"unable to clone git repository",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"fetch failed from origin",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"git fetch error",scm_checkout_failed,jenkins,git-job,checkout failed,high
+"jenkins unable to retrieve source code",scm_checkout_failed,jenkins,git-job,checkout failed,high
+
+"connection timed out during banner exchange",ssh_timeout,jenkins,ssh-job,timeout,high
+"ssh unreachable host",ssh_timeout,jenkins,ssh-job,timeout,high
+"no route to host ssh",ssh_timeout,jenkins,ssh-job,timeout,high
+"network unreachable port 22",ssh_timeout,jenkins,ssh-job,timeout,high
+"ssh keepalive timeout",ssh_timeout,jenkins,ssh-job,timeout,high
+"remote host not responding ssh",ssh_timeout,jenkins,ssh-job,timeout,high
