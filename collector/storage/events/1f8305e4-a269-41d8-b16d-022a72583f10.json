@@ -1,0 +1,24 @@
+{
+  "event_id": "1f8305e4-a269-41d8-b16d-022a72583f10",
+  "source": "jenkins",
+  "service": "permission_denied",
+  "environment": "ci",
+  "timestamp": "2026-02-19T08:48:53.845210",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Permission Denied)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\permission>type C:\\Windows\\System32\\config\\SAM \nThe process cannot access the file because it is being used by another process.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao The process cannot access the file because it is being used by another process.",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-19T08:48:53.845210",
+    "build_number": "2",
+    "node": "master",
+    "job_name": "permission_denied",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "Started by user Anvitha G Rao The process cannot access the file because it is being used by another process.",
+    "cleaned_log": "Started by user Anvitha G Rao\n\nThe process cannot access the file because it is being used by another process."
+  },
+  "severity": "high"
+}

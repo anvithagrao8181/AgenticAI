@@ -1,246 +1,121 @@
 text,label,source,service,error_signature,severity,normalized_label
-ssh: connect to host <ip> port 22: connection timed out,ssh_timeout,jenkins,git-ssh-job,Connection timed out,high,ssh_timeout
-ssh: connect to host <ip> port 22: connection timed out,ssh_timeout,jenkins,deploy-job,Connection timed out,high,ssh_timeout
-ssh: connect to host <ip> port 22: connection timed out,ssh_timeout,jenkins,infra-check,Connection timed out,high,ssh_timeout
-ssh: connect to host <ip> port 22: connection timed out,ssh_timeout,jenkins,prod-deploy,Connection timed out,high,ssh_timeout
-ssh: connect to host <ip> port 22: connection timed out,ssh_timeout,jenkins,stage-deploy,Connection timed out,high,ssh_timeout
-"permission denied (publickey,password).",ssh_auth_failed,jenkins,git-ssh-job,Permission denied,high,ssh_auth_failed
-permission denied (publickey).,ssh_auth_failed,jenkins,deploy-job,Permission denied,high,ssh_auth_failed
-authentication failed.,ssh_auth_failed,jenkins,git-pull-job,Authentication failed,high,ssh_auth_failed
-"permission denied, please try again.",ssh_auth_failed,jenkins,infra-job,Permission denied,high,ssh_auth_failed
-publickey authentication failed.,ssh_auth_failed,jenkins,prod-deploy,Authentication failed,high,ssh_auth_failed
-ssh: connect to host <ip> port 22: connection refused,connection_refused,jenkins,infra-check,Connection refused,high,connection_refused
-ssh: connect to host <ip> port 22: connection refused,connection_refused,jenkins,deploy-job,Connection refused,high,connection_refused
-connect to host <ip> port 22: connection refused,connection_refused,jenkins,prod-deploy,Connection refused,high,connection_refused
-connection refused by host <ip>,connection_refused,jenkins,stage-deploy,Connection refused,high,connection_refused
-ssh connection refused,connection_refused,jenkins,infra-job,Connection refused,high,connection_refused
-ssh: connect to host <ip>: no route to host,network_unreachable,jenkins,infra-job,No route to host,high,network_unreachable
-network is unreachable,network_unreachable,jenkins,infra-check,Network unreachable,high,network_unreachable
-no route to host,network_unreachable,jenkins,prod-deploy,No route to host,high,network_unreachable
-destination host unreachable,network_unreachable,jenkins,stage-deploy,Network unreachable,high,network_unreachable
-cannot reach host <ip>,network_unreachable,jenkins,network-test,Network unreachable,high,network_unreachable
-mvn is not recognized as an internal or external command,mvn_missing,jenkins,mvn-build,command not found,high,mvn_missing
-mvn: command not found,mvn_missing,jenkins,build-job,command not found,high,mvn_missing
-maven executable not found,mvn_missing,jenkins,ci-build,command not found,high,mvn_missing
-unable to locate mvn,mvn_missing,jenkins,compile-job,command not found,high,mvn_missing
-mvn not installed on agent,mvn_missing,jenkins,agent-build,command not found,high,mvn_missing
-fatal: could not read from remote repository,git_auth_failed,jenkins,git-pull-job,Authentication failed,high,git_auth_failed
-fatal: authentication failed for repository,git_auth_failed,jenkins,git-fetch,Authentication failed,high,git_auth_failed
-remote: invalid username or password,git_auth_failed,jenkins,git-push,Authentication failed,high,git_auth_failed
-repository access denied,git_auth_failed,jenkins,git-clone,Authentication failed,high,git_auth_failed
-fatal: authentication failed,git_auth_failed,jenkins,git-sync,Authentication failed,high,git_auth_failed
-permission denied while accessing file,permission_denied,jenkins,file-job,Permission denied,medium,permission_denied
-access denied to directory,permission_denied,jenkins,deploy-job,Permission denied,medium,permission_denied
-operation not permitted,permission_denied,jenkins,infra-job,Permission denied,medium,permission_denied
-user does not have permission,permission_denied,jenkins,agent-task,Permission denied,medium,permission_denied
-permission denied while executing script,permission_denied,jenkins,script-job,Permission denied,medium,permission_denied
-request timed out,ssh_timeout,jenkins,network-test,Connection timed out,high,ssh_timeout
-connection timed out while connecting to host,ssh_timeout,jenkins,infra-check,Connection timed out,high,ssh_timeout
-timeout while connecting to server,ssh_timeout,jenkins,prod-deploy,Connection timed out,high,ssh_timeout
-socket timeout exception,ssh_timeout,jenkins,service-check,Connection timed out,high,ssh_timeout
-read timed out,ssh_timeout,jenkins,api-test,Connection timed out,high,ssh_timeout
-unable to resolve host,network_unreachable,jenkins,dns-check,Network unreachable,high,network_unreachable
-temporary failure in name resolution,network_unreachable,jenkins,dns-job,Network unreachable,high,network_unreachable
-host not found,network_unreachable,jenkins,infra-job,Network unreachable,high,network_unreachable
-dns lookup failed,network_unreachable,jenkins,network-test,Network unreachable,high,network_unreachable
-cannot resolve hostname,network_unreachable,jenkins,prod-deploy,Network unreachable,high,network_unreachable
-build failed due to missing dependency,unknown,jenkins,build-job,Build failed,medium,unknown
-error occurred during build,unknown,jenkins,ci-build,Build failed,medium,unknown
-pipeline failed at stage build,unknown,jenkins,compile-job,Build failed,medium,unknown
-unknown error occurred,unknown,jenkins,infra-job,Unknown error,medium,unknown
-unexpected failure in pipeline,unknown,jenkins,prod-deploy,Unknown error,medium,unknown
-cannot connect to the docker daemon at unix:///var/run/docker.sock,docker_daemon_down,jenkins,docker-build,Docker daemon not running,high,docker_daemon_down
-docker: permission denied while trying to connect to the docker daemon socket,docker_permission,jenkins,docker-job,Permission denied,high,docker_permission
-error response from daemon: no such image,docker_image_missing,jenkins,docker-run,Image not found,medium,docker_image_missing
-failed to create shim task,docker_runtime_error,jenkins,container-start,Container runtime error,high,docker_runtime_error
-oci runtime create failed,docker_runtime_error,jenkins,docker-deploy,Container runtime error,high,docker_runtime_error
-unable to locate credentials,cloud_auth_failed,jenkins,aws-deploy,Missing credentials,high,cloud_auth_failed
-accessdenied: user is not authorized to perform this action,cloud_auth_failed,jenkins,terraform-apply,Access denied,high,cloud_auth_failed
-requestlimitexceeded: rate exceeded,cloud_rate_limit,jenkins,aws-sync,API rate limit,medium,cloud_rate_limit
-instance limit exceeded,cloud_quota_exceeded,jenkins,ec2-launch,Quota exceeded,high,cloud_quota_exceeded
-invalidclienttokenid: the security token included in the request is invalid,cloud_auth_failed,jenkins,aws-cli,Invalid token,high,cloud_auth_failed
-error from server (forbidden): pods is forbidden,k8s_rbac_forbidden,jenkins,k8s-deploy,RBAC forbidden,high,k8s_rbac_forbidden
-crashloopbackoff,k8s_crashloop,jenkins,k8s-app,Pod crash loop,high,k8s_crashloop
-imagepullbackoff,k8s_image_pull_failed,jenkins,k8s-deploy,Image pull failed,high,k8s_image_pull_failed
-failed to pull image,k8s_image_pull_failed,jenkins,k8s-app,Image pull failed,high,k8s_image_pull_failed
-connection refused to kube-apiserver,k8s_api_unreachable,jenkins,k8s-check,API server unreachable,high,k8s_api_unreachable
-npm err! network timeout,npm_network_timeout,jenkins,frontend-build,Network timeout,medium,npm_network_timeout
-npm err! code e401,npm_auth_failed,jenkins,frontend-build,Authentication failed,high,npm_auth_failed
-could not resolve all dependencies for configuration,gradle_dependency_failed,jenkins,gradle-build,Dependency resolution failed,high,gradle_dependency_failed
-pip install failed: no matching distribution found,pip_dependency_missing,jenkins,python-build,Package not found,medium,pip_dependency_missing
-pip install failed due to ssl error,pip_ssl_error,jenkins,python-build,SSL error,high,pip_ssl_error
-could not connect to mysql server,db_connection_failed,jenkins,db-migrate,Database connection failed,high,db_connection_failed
-fatal: password authentication failed for user,db_auth_failed,jenkins,db-job,Authentication failed,high,db_auth_failed
-connection refused: no further information,db_connection_failed,jenkins,db-check,Connection refused,high,db_connection_failed
-ora-12541: tns:no listener,db_listener_down,jenkins,oracle-job,Listener down,high,db_listener_down
-timeout expired while connecting to database,db_timeout,jenkins,db-backup,Connection timed out,high,db_timeout
-sslhandshakeexception: received fatal alert,ssl_handshake_failed,jenkins,api-call,SSL handshake failed,high,ssl_handshake_failed
-certificate has expired,ssl_cert_expired,jenkins,service-check,Certificate expired,high,ssl_cert_expired
-unable to find valid certification path,ssl_cert_invalid,jenkins,api-call,Invalid certificate,high,ssl_cert_invalid
-pkix path building failed,ssl_cert_invalid,jenkins,secure-job,Invalid certificate,high,ssl_cert_invalid
-hostname verification failed,ssl_hostname_mismatch,jenkins,api-test,Hostname mismatch,high,ssl_hostname_mismatch
-no space left on device,disk_full,jenkins,build-agent,Disk full,high,disk_full
-out of memory error,oom_error,jenkins,java-build,Out of memory,high,oom_error
-java.lang.outofmemoryerror: java heap space,oom_error,jenkins,mvn-build,Out of memory,high,oom_error
-disk quota exceeded,disk_quota_exceeded,jenkins,artifact-upload,Quota exceeded,high,disk_quota_exceeded
-too many open files,fd_limit_exceeded,jenkins,agent-job,File descriptor limit,high,fd_limit_exceeded
-jenkins agent is offline,agent_offline,jenkins,any-job,Agent offline,high,agent_offline
-failed to allocate executor,executor_unavailable,jenkins,queue-job,No executors available,medium,executor_unavailable
-build aborted due to timeout,build_timeout,jenkins,long-build,Build timeout,medium,build_timeout
-pipeline aborted by user,manual_abort,jenkins,any-job,Manually aborted,low,manual_abort
-scm checkout failed,scm_checkout_failed,jenkins,git-job,SCM checkout failed,high,scm_checkout_failed
-error acquiring the state lock,terraform_state_lock,jenkins,terraform-apply,State lock error,medium,terraform_state_lock
-failed to load backend,terraform_backend_failed,jenkins,terraform-init,Backend init failed,high,terraform_backend_failed
-error: invalidparameter,terraform_invalid_param,jenkins,terraform-apply,Invalid parameter,medium,terraform_invalid_param
-error creating resource,terraform_resource_failed,jenkins,terraform-apply,Resource creation failed,high,terraform_resource_failed
-provider produced inconsistent final plan,terraform_provider_bug,jenkins,terraform-plan,Provider error,medium,terraform_provider_bug
-permission denied while accessing vault,vault_permission_denied,jenkins,vault-job,Permission denied,high,vault_permission_denied
-vault token expired,vault_token_expired,jenkins,secret-sync,Token expired,high,vault_token_expired
-failed to renew vault lease,vault_lease_failed,jenkins,vault-renew,Lease renewal failed,medium,vault_lease_failed
-error reading secret from vault,vault_secret_read_failed,jenkins,config-job,Secret read failed,high,vault_secret_read_failed
-vault connection refused,vault_connection_failed,jenkins,vault-check,Connection refused,high,vault_connection_failed
-failed to push artifact to repository,artifact_push_failed,jenkins,artifact-upload,Push failed,high,artifact_push_failed
-artifact repository returned 403,artifact_auth_failed,jenkins,nexus-upload,Access denied,high,artifact_auth_failed
-failed to download artifact,artifact_download_failed,jenkins,artifact-fetch,Download failed,medium,artifact_download_failed
-image push failed: unauthorized,registry_auth_failed,jenkins,docker-push,Unauthorized,high,registry_auth_failed
-manifest unknown,registry_manifest_missing,jenkins,docker-pull,Manifest missing,medium,registry_manifest_missing
-failed to send metrics to prometheus,metrics_push_failed,jenkins,metrics-job,Metrics push failed,medium,metrics_push_failed
-alertmanager connection refused,alertmanager_down,jenkins,alert-check,Alertmanager down,high,alertmanager_down
-grafana api returned 401,grafana_auth_failed,jenkins,monitoring-job,Authentication failed,high,grafana_auth_failed
-failed to scrape target,prometheus_scrape_failed,jenkins,metrics-check,Scrape failed,medium,prometheus_scrape_failed
-no data points received,metrics_missing,jenkins,monitoring-job,No metrics,low,metrics_missing
-failed to connect to kafka broker,kafka_broker_down,jenkins,kafka-job,Broker down,high,kafka_broker_down
-kafka authorization failed,kafka_auth_failed,jenkins,kafka-producer,Authentication failed,high,kafka_auth_failed
-connection to rabbitmq refused,rabbitmq_down,jenkins,queue-job,Connection refused,high,rabbitmq_down
-sqs receivemessage throttled,sqs_throttled,jenkins,sqs-job,API throttled,medium,sqs_throttled
-message publish failed,queue_publish_failed,jenkins,messaging-job,Publish failed,medium,queue_publish_failed
-502 bad gateway,bad_gateway,jenkins,api-check,Upstream failure,high,bad_gateway
-504 gateway timeout,gateway_timeout,jenkins,api-check,Upstream timeout,high,gateway_timeout
-connection reset by peer,connection_reset,jenkins,proxy-job,Connection reset,high,connection_reset
-upstream prematurely closed connection,upstream_closed,jenkins,nginx-job,Upstream closed,high,upstream_closed
-no healthy upstream,no_healthy_backend,jenkins,lb-check,No healthy backend,high,no_healthy_backend
-assertionerror: expected true but was false,test_assertion_failed,jenkins,test-suite,Assertion failed,low,test_assertion_failed
-test timed out after 300 seconds,test_timeout,jenkins,test-suite,Test timeout,medium,test_timeout
-element not found exception,ui_element_not_found,jenkins,ui-tests,Element not found,medium,ui_element_not_found
-api returned 500 during test,api_test_failed,jenkins,api-tests,API error,medium,api_test_failed
-flaky test detected,flaky_test,jenkins,test-suite,Flaky test,low,flaky_test
-upstream connect error or disconnect/reset,istio_upstream_error,jenkins,service-mesh,Upstream error,high,istio_upstream_error
-no healthy upstream envoy,envoy_no_healthy,jenkins,mesh-check,No healthy upstream,high,envoy_no_healthy
-503 service unavailable from envoy,envoy_503,jenkins,api-check,Service unavailable,high,envoy_503
-tls error in envoy proxy,envoy_tls_error,jenkins,mesh-job,TLS error,high,envoy_tls_error
-connection pool exhausted,envoy_pool_exhausted,jenkins,mesh-job,Connection pool exhausted,medium,envoy_pool_exhausted
-model file not found,model_missing,jenkins,ml-train,Model missing,high,model_missing
-failed to load model weights,model_load_failed,jenkins,ml-infer,Model load failed,high,model_load_failed
-gpu out of memory,gpu_oom,jenkins,ml-train,GPU out of memory,high,gpu_oom
-training data not found,training_data_missing,jenkins,ml-train,Training data missing,high,training_data_missing
-model serving endpoint not reachable,model_endpoint_down,jenkins,ml-serve,Endpoint unreachable,high,model_endpoint_down
-critical vulnerabilities found,security_scan_failed,jenkins,security-scan,Vulnerabilities found,high,security_scan_failed
-policy violation detected,policy_violation,jenkins,compliance-job,Policy violation,high,policy_violation
-license check failed,license_violation,jenkins,license-scan,License violation,medium,license_violation
-secrets detected in repository,secret_detected,jenkins,secret-scan,Secret found,high,secret_detected
-container image failed security scan,image_scan_failed,jenkins,image-scan,Scan failed,high,image_scan_failed
-http 500 internal server error,http_500,jenkins,api-job,Internal server error,high,http_500
-http 503 service unavailable,http_503,jenkins,api-job,Service unavailable,high,http_503
-http 429 too many requests,http_429,jenkins,api-job,Rate limited,medium,http_429
-service returned malformed response,api_malformed_response,jenkins,api-job,Malformed response,medium,api_malformed_response
-downstream service timeout,downstream_timeout,jenkins,api-job,Timeout,high,downstream_timeout
-canary deployment failed health check,canary_health_failed,jenkins,canary-deploy,Health check failed,high,canary_health_failed
-blue environment not responding,blue_env_down,jenkins,blue-green,Environment down,high,blue_env_down
-traffic shift failed,traffic_shift_failed,jenkins,deploy-job,Traffic shift failed,high,traffic_shift_failed
-rollback initiated due to errors,auto_rollback_triggered,jenkins,deploy-job,Rollback triggered,medium,auto_rollback_triggered
-deployment verification failed,deploy_verification_failed,jenkins,deploy-job,Verification failed,high,deploy_verification_failed
-service not registered in discovery,service_not_registered,jenkins,service-check,Service discovery failed,high,service_not_registered
-config server unreachable,config_server_down,jenkins,config-job,Config server down,high,config_server_down
-failed to load configuration,config_load_failed,jenkins,app-start,Config load failed,high,config_load_failed
-invalid configuration format,config_invalid,jenkins,config-job,Invalid config,medium,config_invalid
-stale configuration detected,config_stale,jenkins,config-check,Stale config,low,config_stale
-connection blocked by firewall,firewall_blocked,jenkins,network-check,Firewall blocked,high,firewall_blocked
-proxy authentication required,proxy_auth_required,jenkins,proxy-job,Proxy auth required,high,proxy_auth_required
-proxy connection failed,proxy_connection_failed,jenkins,proxy-job,Proxy failure,high,proxy_connection_failed
-network policy denied traffic,network_policy_denied,jenkins,k8s-network,Network policy denied,high,network_policy_denied
-icmp destination unreachable,icmp_unreachable,jenkins,network-test,Host unreachable,high,icmp_unreachable
-clock skew detected,clock_skew,jenkins,security-check,Clock skew,medium,clock_skew
-ntp synchronization failed,ntp_sync_failed,jenkins,infra-job,NTP sync failed,medium,ntp_sync_failed
-certificate not yet valid,cert_not_yet_valid,jenkins,ssl-check,Clock issue,high,cert_not_yet_valid
-token expired due to clock drift,token_clock_drift,jenkins,auth-job,Clock drift,high,token_clock_drift
-system time out of sync,time_out_of_sync,jenkins,infra-check,Time sync issue,medium,time_out_of_sync
-oauth token expired,oauth_token_expired,jenkins,auth-job,Token expired,high,oauth_token_expired
-invalid oauth client,oauth_invalid_client,jenkins,auth-job,Invalid client,high,oauth_invalid_client
-sso authentication failed,sso_auth_failed,jenkins,login-check,SSO failed,high,sso_auth_failed
-identity provider unreachable,idp_down,jenkins,auth-job,IdP down,high,idp_down
-access token validation failed,token_validation_failed,jenkins,auth-job,Token invalid,high,token_validation_failed
-log ingestion failed,log_ingestion_failed,jenkins,logging-job,Ingestion failed,medium,log_ingestion_failed
-failed to ship logs to elk,elk_ship_failed,jenkins,logging-job,Log ship failed,medium,elk_ship_failed
-log format parsing error,log_parse_error,jenkins,logging-job,Parse error,low,log_parse_error
-missing correlation id,missing_correlation_id,jenkins,trace-job,Tracing issue,low,missing_correlation_id
-distributed tracing failed,tracing_failed,jenkins,trace-job,Tracing failed,medium,tracing_failed
-feature flag service unreachable,feature_flag_service_down,jenkins,feature-job,Service down,high,feature_flag_service_down
-invalid feature flag configuration,feature_flag_invalid,jenkins,feature-job,Invalid config,medium,feature_flag_invalid
-feature toggle evaluation failed,feature_toggle_failed,jenkins,feature-job,Toggle failed,medium,feature_toggle_failed
-flag dependency missing,feature_flag_dependency_missing,jenkins,feature-job,Dependency missing,medium,feature_flag_dependency_missing
-failed to refresh feature flags,feature_flag_refresh_failed,jenkins,feature-job,Refresh failed,low,feature_flag_refresh_failed
-build cache corrupted,build_cache_corrupted,jenkins,build-job,Cache corrupted,medium,build_cache_corrupted
-failed to restore build cache,build_cache_restore_failed,jenkins,build-job,Cache restore failed,medium,build_cache_restore_failed
-artifact cache miss,artifact_cache_miss,jenkins,build-job,Cache miss,low,artifact_cache_miss
-cache service unreachable,cache_service_down,jenkins,cache-job,Cache down,high,cache_service_down
-invalid cache key,cache_key_invalid,jenkins,cache-job,Invalid cache key,low,cache_key_invalid
-p99 latency exceeded threshold,latency_threshold_exceeded,jenkins,perf-check,High latency,medium,latency_threshold_exceeded
-service response time degraded,performance_degraded,jenkins,perf-check,Performance degraded,medium,performance_degraded
-throughput dropped below sla,throughput_low,jenkins,perf-check,Low throughput,high,throughput_low
-resource contention detected,resource_contention,jenkins,perf-check,Contention,medium,resource_contention
-queue backlog increasing,queue_backlog,jenkins,queue-check,Backlog,medium,queue_backlog
-java: command not found,java_missing,jenkins,build-job,Command not found,high,java_missing
-java_home is not set correctly,java_home_invalid,jenkins,mvn-build,Env misconfigured,high,java_home_invalid
-unsupported class file major version,java_version_mismatch,jenkins,build-job,Version mismatch,high,java_version_mismatch
-could not find or load main class,java_classpath_error,jenkins,run-job,Classpath error,medium,java_classpath_error
-invalid target release: 17,java_version_mismatch,jenkins,compile-job,Version mismatch,high,java_version_mismatch
-address already in use,port_already_in_use,jenkins,app-start,Port conflict,high,port_already_in_use
-bind: only one usage of each socket address,port_already_in_use,jenkins,service-start,Port conflict,high,port_already_in_use
-port 8080 is already allocated,port_already_in_use,jenkins,docker-run,Port conflict,high,port_already_in_use
-failed to start server: port in use,port_already_in_use,jenkins,api-start,Port conflict,high,port_already_in_use
-listen tcp 0.0.0.0:80: bind: address already in use,port_already_in_use,jenkins,nginx-start,Port conflict,high,port_already_in_use
-too many connections,db_connection_limit,jenkins,db-job,Connection limit,high,db_connection_limit
-remaining connection slots are reserved,db_connection_limit,jenkins,db-check,Connection limit,high,db_connection_limit
-max_connections exceeded,db_connection_limit,jenkins,db-migrate,Connection limit,high,db_connection_limit
-connection pool exhausted,db_pool_exhausted,jenkins,app-start,Pool exhausted,high,db_pool_exhausted
-hikaripool-1 - connection is not available,db_pool_exhausted,jenkins,java-app,Pool exhausted,high,db_pool_exhausted
-failed to fetch metadata from registry,docker_registry_unreachable,jenkins,docker-build,Registry unreachable,high,docker_registry_unreachable
-net/http: request canceled while waiting for connection,docker_registry_timeout,jenkins,docker-pull,Timeout,high,docker_registry_timeout
-tls handshake timeout,docker_registry_timeout,jenkins,docker-push,Timeout,high,docker_registry_timeout
-unauthorized: authentication required,docker_registry_auth_failed,jenkins,docker-push,Unauthorized,high,docker_registry_auth_failed
-denied: requested access to the resource is denied,docker_registry_auth_failed,jenkins,docker-push,Unauthorized,high,docker_registry_auth_failed
-npm err! enospc: no space left on device,disk_full,jenkins,frontend-build,Disk full,high,disk_full
-fatal: unable to write new index file,disk_full,jenkins,git-job,Disk full,high,disk_full
-write error: no space left on device,disk_full,jenkins,artifact-job,Disk full,high,disk_full
-cannot allocate memory,oom_error,jenkins,build-job,Out of memory,high,oom_error
-killed process out of memory,oom_error,jenkins,container-run,Out of memory,high,oom_error
-failed to lock apt for exclusive operation,package_manager_locked,jenkins,vm-setup,Lock held,medium,package_manager_locked
-another process is using the dpkg database,package_manager_locked,jenkins,vm-setup,Lock held,medium,package_manager_locked
-yum is locked by another process,package_manager_locked,jenkins,infra-setup,Lock held,medium,package_manager_locked
-pip is configured with locations that require tls/ssl,pip_ssl_error,jenkins,python-build,SSL error,high,pip_ssl_error
-ssl: certificate_verify_failed,pip_ssl_error,jenkins,python-build,SSL error,high,pip_ssl_error
-git: not found,git_missing,jenkins,checkout,Command missing,high,git_missing
-git is not recognized as an internal or external command,git_missing,jenkins,checkout,Command missing,high,git_missing
-detected dubious ownership in repository,git_safe_directory,jenkins,checkout,Ownership issue,medium,git_safe_directory
-fatal: refusing to merge unrelated histories,git_merge_conflict,jenkins,merge-job,Merge conflict,medium,git_merge_conflict
-merge conflict in file,git_merge_conflict,jenkins,merge-job,Merge conflict,medium,git_merge_conflict
-node: command not found,node_missing,jenkins,frontend-build,Command missing,high,node_missing
-node is not recognized as an internal or external command,node_missing,jenkins,frontend-build,Command missing,high,node_missing
-cannot find module,node_module_missing,jenkins,frontend-build,Dependency missing,medium,node_module_missing
-module not found: error: can't resolve,node_module_missing,jenkins,frontend-build,Dependency missing,medium,node_module_missing
-elifecycle exit status 1,node_build_failed,jenkins,frontend-build,Build failed,medium,node_build_failed
-gradle build daemon disappeared unexpectedly,gradle_daemon_crashed,jenkins,gradle-build,Daemon crash,high,gradle_daemon_crashed
-could not reserve enough space for object heap,jvm_memory_error,jenkins,gradle-build,JVM memory,high,jvm_memory_error
-gc overhead limit exceeded,jvm_memory_error,jenkins,java-build,JVM memory,high,jvm_memory_error
-unable to create native thread,thread_limit_exceeded,jenkins,app-start,Thread limit,high,thread_limit_exceeded
-fork: retry: resource temporarily unavailable,process_limit_exceeded,jenkins,infra-job,Process limit,high,process_limit_exceeded
-systemctl: command not found,systemctl_missing,jenkins,vm-check,Command missing,medium,systemctl_missing
-service nginx restart failed,service_restart_failed,jenkins,deploy-job,Service failed,high,service_restart_failed
-failed to start nginx.service,service_start_failed,jenkins,deploy-job,Service failed,high,service_start_failed
-unit not found,service_not_installed,jenkins,infra-job,Service missing,medium,service_not_installed
-dependency failed for service,service_dependency_failed,jenkins,infra-job,Dependency failed,high,service_dependency_failed
-tar: unexpected eof in archive,artifact_corrupted,jenkins,artifact-download,Corrupted file,medium,artifact_corrupted
-checksum mismatch,artifact_corrupted,jenkins,artifact-download,Corrupted file,medium,artifact_corrupted
-file is corrupted and cannot be opened,artifact_corrupted,jenkins,artifact-fetch,Corrupted file,medium,artifact_corrupted
-invalid or corrupt jarfile,artifact_corrupted,jenkins,java-run,Corrupted file,medium,artifact_corrupted
-zip end header not found,artifact_corrupted,jenkins,artifact-fetch,Corrupted file,medium,artifact_corrupted
+no space left on device,disk_full,jenkins,disk-job,disk full,high,disk_full
+disk is full cannot write,disk_full,jenkins,disk-job,disk full,high,disk_full
+filesystem full error,disk_full,jenkins,disk-job,disk full,high,disk_full
+insufficient disk space on agent,disk_full,jenkins,disk-job,disk full,high,disk_full
+volume capacity exceeded,disk_full,jenkins,disk-job,disk full,high,disk_full
+unable to create file disk full,disk_full,jenkins,disk-job,disk full,high,disk_full
+not enough storage space,disk_full,jenkins,disk-job,disk full,high,disk_full
+write failed no space left,disk_full,jenkins,disk-job,disk full,high,disk_full
+cannot connect to docker daemon,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker daemon not running,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+failed to connect to docker.sock,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+dial unix var run docker.sock connect no such file,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker service is inactive,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker engine unavailable,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+failed to start docker service,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+error during connect docker daemon is not running,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+cannot connect to docker engine pipe,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+open //./pipe/docker_engine failed,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker desktop not started,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker engine pipe not available,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+permission denied publickey,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+ssh authentication failed,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+git over ssh access denied,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+publickey authentication failure,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+ssh key rejected by server,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+unable to authenticate via ssh,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+fatal authentication failed for repository,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+invalid username or password git,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+repository access denied,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+could not read from remote repository,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+git clone authentication failed,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+git credentials rejected,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+http 500 internal server error,http_500,jenkins,api-job,server error,high,http_500
+500 server error response,http_500,jenkins,api-job,server error,high,http_500
+api returned status code 500,http_500,jenkins,api-job,server error,high,http_500
+backend service returned 500,http_500,jenkins,api-job,server error,high,http_500
+unexpected 500 error from service,http_500,jenkins,api-job,server error,high,http_500
+internal server error occurred,http_500,jenkins,api-job,server error,high,http_500
+mvn command not found,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+maven not installed,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+mvn is not recognized,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+unable to locate maven executable,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+maven binary missing from path,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+bash mvn command not found,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+permission denied while accessing file,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+access denied to directory,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+user does not have required permission,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+operation not permitted,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+cannot execute due to permission restrictions,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+write permission denied,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+scm checkout failed,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+failed to fetch repository,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+git checkout failed,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+error cloning repository,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+unable to checkout branch,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+repository checkout unsuccessful,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+ssh connection timed out,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+timeout while connecting to host,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+operation timed out ssh,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+ssh handshake timeout,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+connection timed out port 22,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+ssh session timeout,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+no space left on device while writing artifact,disk_full,jenkins,disk-job,disk full,high,disk_full
+failed writing to workspace insufficient space,disk_full,jenkins,disk-job,disk full,high,disk_full
+jenkins workspace out of disk space,disk_full,jenkins,disk-job,disk full,high,disk_full
+cannot allocate disk space,disk_full,jenkins,disk-job,disk full,high,disk_full
+error writing file system full,disk_full,jenkins,disk-job,disk full,high,disk_full
+disk quota exceeded,disk_full,jenkins,disk-job,disk full,high,disk_full
+build failed no disk space available,disk_full,jenkins,disk-job,disk full,high,disk_full
+temporary directory full,disk_full,jenkins,disk-job,disk full,high,disk_full
+overlayfs no space left,disk_full,jenkins,disk-job,disk full,high,disk_full
+docker build failed no space left on device,disk_full,jenkins,disk-job,disk full,high,disk_full
+cannot connect to docker engine,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+dockerd process not found,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker ps returned error daemon not responding,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+error during connect http docker socket,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker info failed daemon unreachable,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+systemctl status docker inactive,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+docker build cannot connect to daemon,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+container runtime not running,docker_daemon_down,jenkins,docker-job,daemon down,high,docker_daemon_down
+authentication refused publickey,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+no supported authentication methods available,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+host key verification failed,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+ssh permission denied password publickey,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+key exchange failed authentication,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+remote rejected our key,ssh_auth_failed,jenkins,git-ssh-job,auth failed,high,ssh_auth_failed
+fatal could not authenticate to github,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+authentication required but no credentials provided,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+access to repository forbidden,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+git push rejected authentication,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+remote repository authentication error,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+token authentication failed,git_auth_failed,jenkins,git-job,auth failed,high,git_auth_failed
+received http status 500 from upstream,http_500,jenkins,api-job,server error,high,http_500
+service responded with 500 internal error,http_500,jenkins,api-job,server error,high,http_500
+gateway returned 500 error,http_500,jenkins,api-job,server error,high,http_500
+application crashed returning 500,http_500,jenkins,api-job,server error,high,http_500
+server error during api call,http_500,jenkins,api-job,server error,high,http_500
+unexpected response 500,http_500,jenkins,api-job,server error,high,http_500
+/usr/bin/mvn not found,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+mvn executable missing in agent,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+maven home not set,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+apache maven not installed on node,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+mvn clean install failed command not found,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+cannot run mvn binary missing,mvn_missing,jenkins,mvn-job,command missing,high,mvn_missing
+chmod required permission denied,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+cannot open file permission denied,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+jenkins user lacks permission,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+access forbidden filesystem,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+failed to write file permission error,permission_denied,jenkins,perm-job,permission denied,medium,permission_denied
+hudson git checkout returned status code 128,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+unable to clone git repository,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+fetch failed from origin,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+git fetch error,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+jenkins unable to retrieve source code,scm_checkout_failed,jenkins,git-job,checkout failed,high,scm_checkout_failed
+connection timed out during banner exchange,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+ssh unreachable host,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+no route to host ssh,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+network unreachable port 22,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+ssh keepalive timeout,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout
+remote host not responding ssh,ssh_timeout,jenkins,ssh-job,timeout,high,ssh_timeout

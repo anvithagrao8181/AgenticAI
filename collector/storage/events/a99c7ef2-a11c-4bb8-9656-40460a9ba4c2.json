@@ -1,0 +1,24 @@
+{
+  "event_id": "a99c7ef2-a11c-4bb8-9656-40460a9ba4c2",
+  "source": "jenkins",
+  "service": "git-auth-failed",
+  "environment": "ci",
+  "timestamp": "2026-02-19T08:46:52.481321",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Git Auth Failed)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git_auth>git clone https://wrong:wrong@github.com/private/repo.git \nCloning into 'repo'...\nremote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/private/repo.git/'\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao Cloning into 'repo'... remote: Invalid username or token. Password authentication is not supported for Git operations. fatal: Authentication failed for 'https://github.co",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-19T08:46:52.481321",
+    "build_number": "3",
+    "node": "master",
+    "job_name": "git-auth-failed",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "Started by user Anvitha G Rao Cloning into 'repo'... remote: Invalid username or token. Password authentication is not supported for Git operations. fatal: Authentication failed for 'https://github.co",
+    "cleaned_log": "Started by user Anvitha G Rao\n\nCloning into 'repo'...\nremote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/private/repo.git/'"
+  },
+  "severity": "high"
+}

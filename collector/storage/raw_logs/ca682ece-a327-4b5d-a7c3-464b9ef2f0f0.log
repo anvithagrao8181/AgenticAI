@@ -1,0 +1,51 @@
+Started by user Anvitha G Rao
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\scm_checkout
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (SCM Checkout Failed)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\scm_checkout\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/nonexistent/repo.git # timeout=10
+Fetching upstream changes from https://github.com/nonexistent/repo.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.51.0.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/nonexistent/repo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ERROR: Error fetching remote repo 'origin'
+hudson.plugins.git.GitException: Failed to fetch from https://github.com/nonexistent/repo.git
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:999)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1240)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM._checkout(GitSCM.java:1311)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.checkout(GitSCM.java:1278)
+	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep.checkout(SCMStep.java:136)
+	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:101)
+	at PluginClassLoader for workflow-scm-step//org.jenkinsci.plugins.workflow.steps.scm.SCMStep$StepExecutionImpl.run(SCMStep.java:88)
+	at PluginClassLoader for workflow-step-api//org.jenkinsci.plugins.workflow.steps.SynchronousNonBlockingStepExecution.lambda$start$0(SynchronousNonBlockingStepExecution.java:49)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: hudson.plugins.git.GitException: Command "git.exe fetch --tags --force --progress -- https://github.com/nonexistent/repo.git +refs/heads/*:refs/remotes/origin/*" returned status code 128:
+stdout: 
+stderr: fatal: Cannot prompt because user interactivity has been disabled.
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/nonexistent/repo.git/'
+
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:2852)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:2188)
+	at PluginClassLoader for git-client//org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:638)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.fetchFrom(GitSCM.java:997)
+	... 12 more
+ERROR: Error fetching remote repo 'origin'
+ERROR: Maximum checkout retry attempts reached, aborting
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] script
+[Pipeline] {

@@ -1,0 +1,24 @@
+{
+  "event_id": "742a4c4a-8208-46b1-bb4b-2e7a6ba4ad7f",
+  "source": "jenkins",
+  "service": "disk_full",
+  "environment": "ci",
+  "timestamp": "2026-02-19T08:41:17.659054",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (Disk Full Simulation)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\disk>fsutil file createnew hugefile.txt 999999999999 \nError 112: There is not enough space on the disk.\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {",
+  "normalized_log": "Started by user Anvitha G Rao Error 112: There is not enough space on the disk.",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-19T08:41:17.659054",
+    "build_number": "11",
+    "node": "master",
+    "job_name": "disk_full",
+    "git_branch": null,
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "Started by user Anvitha G Rao Error 112: There is not enough space on the disk.",
+    "cleaned_log": "Started by user Anvitha G Rao\n\nError 112: There is not enough space on the disk."
+  },
+  "severity": "critical"
+}

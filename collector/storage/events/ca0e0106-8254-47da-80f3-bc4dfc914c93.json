@@ -1,0 +1,24 @@
+{
+  "event_id": "ca0e0106-8254-47da-80f3-bc4dfc914c93",
+  "source": "jenkins",
+  "service": "git-ssh-error-test",
+  "environment": "ci",
+  "timestamp": "2026-02-19T08:43:36.827240",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git-ssh-error-test@2\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (SSH Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\git-ssh-error-test@2>ssh fakeuser@192.0.2.1 \nPseudo-terminal will not be allocated because stdin is not a terminal.\nssh: connect to host 192.0.2.1 port 22: Connection timed out\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao Pseudo-terminal will not be allocated because stdin is not a terminal. ssh: connect to host <IP> port 22: Connection timed out Pipeline failed. Sending FULL console log t",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-19T08:43:36.825784",
+    "build_number": "81",
+    "node": "master",
+    "job_name": "git-ssh-error-test",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": null,
+    "error_signature": "Started by user Anvitha G Rao Pseudo-terminal will not be allocated because stdin is not a terminal. ssh: connect to host <IP> port 22: Connection timed out Pipeline failed. Sending FULL console log t",
+    "cleaned_log": "Started by user Anvitha G Rao\n\nPseudo-terminal will not be allocated because stdin is not a terminal.\nssh: connect to host 192.0.2.1 port 22: Connection timed out\nPipeline failed. Sending FULL console log to AIOps Collector..."
+  },
+  "severity": "high"
+}

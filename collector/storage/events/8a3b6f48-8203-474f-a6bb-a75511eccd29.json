@@ -1,0 +1,24 @@
+{
+  "event_id": "8a3b6f48-8203-474f-a6bb-a75511eccd29",
+  "source": "jenkins",
+  "service": "http_500",
+  "environment": "ci",
+  "timestamp": "2026-02-19T08:47:30.417909",
+  "raw_log": "Started by user Anvitha G Rao\n[Pipeline] Start of Pipeline\n[Pipeline] node\nRunning on Jenkins in C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500\n[Pipeline] {\n[Pipeline] stage\n[Pipeline] { (HTTP 500 Test)\n[Pipeline] bat\n\nC:\\ProgramData\\Jenkins\\.jenkins\\workspace\\http_500>curl https://httpstat.us/500 \n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server\n[Pipeline] }\n[Pipeline] // stage\n[Pipeline] stage\n[Pipeline] { (Declarative: Post Actions)\n[Pipeline] script\n[Pipeline] {\n[Pipeline] echo\nPipeline failed. Sending FULL console log to AIOps Collector...",
+  "normalized_log": "Started by user Anvitha G Rao % Total % Received % Xferd Average Speed Time Time Time Current Dload Upload Total Spent Left Speed 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0 0 0 0 0 0 0 0 0 --:--:-- ",
+  "metadata": {
+    "collector_host": "Anvitha",
+    "collector_os": "Windows",
+    "collector_os_version": "10.0.26200",
+    "received_at": "2026-02-19T08:47:30.417909",
+    "build_number": "11",
+    "node": "master",
+    "job_name": "http_500",
+    "git_branch": "null",
+    "commit_id": null,
+    "triggered_by": "jenkins-pipeline",
+    "error_signature": "Started by user Anvitha G Rao % Total % Received % Xferd Average Speed Time Time Time Current Dload Upload Total Spent Left Speed 0 0 0 0 0 0 0 0 --:--:-- --:--:-- --:--:-- 0 0 0 0 0 0 0 0 0 --:--:-- ",
+    "cleaned_log": "Started by user Anvitha G Rao\n\n  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\ncurl: (52) Empty reply from server\nPipeline failed. Sending FULL console log to AIOps Collector..."
+  },
+  "severity": "high"
+}

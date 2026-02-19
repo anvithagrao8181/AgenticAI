@@ -1,3 +1,6 @@
+text,label,source,service,error_signature,severity
+
+
 "no space left on device",disk_full,jenkins,disk-job,disk full,high
 "disk is full cannot write",disk_full,jenkins,disk-job,disk full,high
 "filesystem full error",disk_full,jenkins,disk-job,disk full,high
@@ -14,6 +17,11 @@
 "docker service is inactive",docker_daemon_down,jenkins,docker-job,daemon down,high
 "docker engine unavailable",docker_daemon_down,jenkins,docker-job,daemon down,high
 "failed to start docker service",docker_daemon_down,jenkins,docker-job,daemon down,high
+"error during connect docker daemon is not running",docker_daemon_down,jenkins,docker-job,daemon down,high
+"cannot connect to docker engine pipe",docker_daemon_down,jenkins,docker-job,daemon down,high
+"open //./pipe/docker_engine failed",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker desktop not started",docker_daemon_down,jenkins,docker-job,daemon down,high
+"docker engine pipe not available",docker_daemon_down,jenkins,docker-job,daemon down,high
 
 "permission denied publickey",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
 "ssh authentication failed",ssh_auth_failed,jenkins,git-ssh-job,auth failed,high
