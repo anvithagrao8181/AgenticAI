@@ -32,7 +32,7 @@ def call_llm(prompt: str):
             "model": OLLAMA_MODEL,
             "prompt": prompt,
             "stream": False,
-            "format": JSON_SCHEMA,          # ⭐ THIS IS THE MAGIC
+            "format": JSON_SCHEMA,         
             "options": {
                 "temperature": 0,
                 "top_p": 0.1
